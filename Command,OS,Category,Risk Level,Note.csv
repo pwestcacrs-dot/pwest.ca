@@ -1,0 +1,26 @@
+Command,OS,Category,Risk Level,Notes
+"ipconfig /all",Windows,Network,1,Shows MAC address and DNS. Essential for no-internet calls.
+"sfc /scannow",Windows,System,2,Repairs corrupted Windows files. Use on every repair.
+"chkdsk /f /r",Windows,Disk,3,Finds bad sectors. Takes time on HDDs. Run overnight.
+"powercfg /batteryreport",Windows,Hardware,1,Generates a health report for laptop batteries.
+"systeminfo",Windows,Hardware,1,Dumps full hardware specs without opening the case.
+"netsh winsock reset",Windows,Network,2,Fixes socket errors. Restart required.
+"taskkill /F /PID",Windows,Process,3,Force-kills frozen apps using their ID number.
+"diskpart",Windows,Disk,5,Powerful disk manager. Be careful: 'clean' wipes everything.
+"gpupdate /force",Windows,System,2,Forces policy changes to apply immediately.
+"wmic product get name",Windows,Software,1,Lists all installed MSI apps to find bloatware.
+"lsblk",Linux,Disk,1,Lists all drives. Great for seeing if a dead SSD is 'awake'.
+"sudo dmesg | grep -i usb",Linux,Hardware,1,Shows real-time USB plug-in logs for troubleshooting.
+"smartctl -a /dev/sdX",Linux,Disk,1,Pulls S.M.A.R.T health data from a physical drive.
+"htop",Linux,Process,1,Interactive task manager. Better than 'top'.
+"sudo badblocks -v /dev/sdX",Linux,Disk,4,Deep scan for physical damage on a customer's drive.
+"grep -r 'error' /var/log/",Linux,System,1,Scans all logs for the word 'error' to find crashes.
+"df -h",Linux,Disk,1,Shows disk space usage in human-readable (GB/MB) format.
+"sudo apt update && sudo apt upgrade",Linux,System,3,Standard update command for Ubuntu/WSL.
+"diskutil list",Mac,Disk,1,The 'Craple' version of diskpart. Shows all APFS containers.
+"system_profiler SPHardwareDataType",Mac,Hardware,1,Dumps Serial Number and Model info instantly.
+"pmset -g assertions",Mac,Hardware,1,Shows what is preventing a Mac from sleeping.
+"sudo purge",Mac,System,2,Force-clears disk cache and RAM for a speed boost.
+"top -o cpu",Mac,Process,1,Shows what is eating the CPU on a Mac. Press 'q' to exit.
+"networksetup -listallhardwareports",Mac,Network,1,Shows all Wi-Fi/Ethernet ports and MAC addresses.
+"scutil --get ComputerName",Mac,System,1,Quickly pulls the name assigned to the Mac.
